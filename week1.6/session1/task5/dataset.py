@@ -36,10 +36,7 @@ class QuakeDataset:
         self.data.clear()
 
         for info in self.feed.reader():
-            # USGS times end in "Z" (UTC); older Pythons' fromisoformat()
-            # can't parse that, so swap it for an explicit UTC offset
-            when = datetime.fromisoformat(info["time"].replace("Z", "+00:00"))
-
+            when = datetime.fromisoformat(info["time"])
             quake = Quake(
                 when,
                 float(info["longitude"]),

@@ -10,10 +10,10 @@ class Rectangle:
         """
         # Add code here to check type and value of provided width & height,
         # raising appropriate exceptions if necessary (see README.md)
-        if self.width < 0 or self.height < 0:
-            raise ValueError("Width and height must be non-negative.")
-        if self.width is not int or self.height is not int:
+        if not isinstance(width, int) or not isinstance(height, int):
             raise TypeError("Width and height must be integers.")
+        if width <= 0 or height <= 0:
+            raise ValueError("Width and height must be greater than zero.")
         
         self.width = width
         self.height = height
