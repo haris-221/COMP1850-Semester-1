@@ -1,0 +1,3 @@
+INFO:root:calculate_average(): started
+DEBUG:root:calculate_average(): total_score = 263, total_assignments = 3
+DEBUG:root:calculate_average(): average = 87
