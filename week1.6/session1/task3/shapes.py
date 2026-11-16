@@ -31,6 +31,7 @@ class Shape:
         """
         Sets this shape's colour to the given colour.
         """
+        
         if colour not in VALID_COLOURS:
             raise ValueError(f"invalid color: must be one of {VALID_COLOURS}")
 
